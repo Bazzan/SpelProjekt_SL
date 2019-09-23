@@ -1,7 +1,6 @@
 window.onload = function(){
 
 
-
     var backgorundImg = []
     var imgCounter = 0;
 

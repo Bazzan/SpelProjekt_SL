@@ -1,14 +1,16 @@
-body, div, p, input, button,  #my_centered_buttons, h1 {
+body, h1, div, p, input, button,  #my_centered_buttons, h1 {
     margin: 0;
     padding: 0;
 }
-   
+
 body, html{
     height: 100%;
     background-image:url("nova-wonders-whats-the-universe-made-of-hero_WxVWP1e.jpg")
 }
 
-
+h1{
+    text-align: center;
+}
 
 body {
 	background-color: rgb(228, 228, 228);
@@ -58,7 +60,9 @@ input {
 }
 
 button {
-	background-color:rgb(150, 150, 150);
+
+    background-color:transparent;
+    outline:none;
 	display: inline-block;
 	width: 25%;
 	margin: 5px 0px 0px 0px;
@@ -66,8 +70,7 @@ button {
 	padding: 8px 16px;
 	text-align: center;
 	font-size: 16px;
-	border-radius: 14px;
+    border: none;
 }
 
 
-	

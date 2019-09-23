@@ -1,4 +1,4 @@
-body, h1, div, p, input, button,  #my_centered_buttons, h1 {
+body, div, p, input, button,  #my_centered_buttons, h1 {
     margin: 0;
     padding: 0;
 }
@@ -8,9 +8,7 @@ body, html{
     background-image:url("nova-wonders-whats-the-universe-made-of-hero_WxVWP1e.jpg")
 }
 
-h1{
-    text-align: center;
-}
+
 
 body {
 	background-color: rgb(228, 228, 228);
@@ -38,8 +36,8 @@ div{
 p {
 	font-size: 32px;
 	text-align: center;
-	
-	color:magenta;
+	width: 80%;
+	color: white;
 	font-weight: bold;
 }
 

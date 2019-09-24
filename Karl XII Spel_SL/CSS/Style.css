@@ -9,7 +9,14 @@ body, html{
 }
 
 h1{
-    text-align: center;
+	text-align: center;
+	color: rgb(238, 235, 235);
+	font-size: 48px;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 body {
@@ -38,8 +45,12 @@ div{
 p {
 	font-size: 32px;
 	text-align: center;
-	
-	color:magenta;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+	color:whitesmoke;
 	font-weight: bold;
 }
 
@@ -71,5 +82,8 @@ button {
 	border-radius: 14px;
 }
 
+footer{
+	align-content: center;
+}
 
 	

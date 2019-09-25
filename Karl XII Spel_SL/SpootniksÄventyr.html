@@ -3,7 +3,7 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/SpelStyle.css">
+    <link rel="stylesheet" href="CSS\SpelStyle.css">
 </head>
 
 <body>
@@ -13,13 +13,22 @@
 <h1> Insert Game -></h1>
 <br>
 
-<button type="button" name="icon" onclick="PlingPlong()">
-    <img src="IMG/Icon.png"/>
+<!-- här ifrån så är all syntax funktionallitet vi behöver för att göra knapparna 
+om ni kollar i CSS filen så har jag gjort knappen rund (boarder-radius: 50%) och sen
+när man ska placera ut knapparna så använder man margin, gå in i debug och markera margin [ X px]
+och använd upp och ned pilarna på tangentbordet för att flytta runt elementet :D -->
+<button type="button" id="SunButton" name="SunButton" onclick="PlingPlong()"  >
+    <img src="IMG/Icon.png" height="100%" width="100%"/>
+    
 </button>
+
 
 <script>
 PlingPlong = function(){
     alert("plingplong");
+    document.getElementById("SunButton").style.visibility = "hidden";
 }
+
+
 </script>
 </body>

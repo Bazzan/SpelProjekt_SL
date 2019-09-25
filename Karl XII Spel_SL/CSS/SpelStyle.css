@@ -1,11 +1,15 @@
-body, h1, div, p, input, button,  #my_centered_buttons, h1 {
+body, h1, div, p, input, button, #button2, #my_centered_buttons, h1 {
     margin: 0;
     padding: 0;
 }
 
 body, html{
-    height: 100%;
-    background-image:url("nova-wonders-whats-the-universe-made-of-hero_WxVWP1e.jpg")
+	height: 100%;
+	width: 100%;
+	background-image:url("../Images/Map.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
 }
 
 h1{
@@ -72,5 +76,30 @@ button {
 	font-size: 16px;
     border: none;
 }
+#SunButton {
+    background-color:white;
+    /* outline:none; */
+	/* padding: none; */
+	/* border: none; */
+    margin-top: 17%;
+    margin-left: 13.5px;
+    width: 392px;
+    height: 380px;
+	position: relative;
+	border-radius: 50%;
+	
+	/* display: inline-block; */
+	
+	
+}
 
+/* 
+document.onmousemove = function(e){
+var x = e.pageX;
+var y = e.pageY;
+e.target.title = "X is "+x+" and Y is "+y;
+};
 
+för att kolla pixlar i debuggern
+
+ */

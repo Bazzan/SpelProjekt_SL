@@ -218,4 +218,19 @@ Pluto = function(){
     currentPlanet = "Pluto";
     LoadImage(image);
 }
+
+
+
+
+
+Click= function(id){
+   var elem = document.getElementById(id)
+    alert(id);
+    
+    
+    elem.innerHTML="nytt svar?"
+    
+
+
+}
  }

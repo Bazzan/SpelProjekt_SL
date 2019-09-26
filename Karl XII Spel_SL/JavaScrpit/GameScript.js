@@ -23,9 +23,13 @@ var my=0;
 
 var questions;
 var answers;
+var correctAnswers;
 
 var rightanswers=0;
 var wronganswers=0;
+document.getElementById('quizButton1').style.visibility = 'hidden';
+document.getElementById('quizButton2').style.visibility = 'hidden';
+document.getElementById('quizButton3').style.visibility = 'hidden';
 
 LoadImage = function(imageURL){
     document.getElementById('SolenButton').style.visibility = 'hidden';
@@ -40,10 +44,13 @@ LoadImage = function(imageURL){
     document.getElementById('NeptunusButton').style.visibility = 'hidden';
     document.getElementById('PlutoButton').style.visibility = 'hidden';
     document.body.style.backgroundImage = "url('"+imageURL+"')";
-    context.drawImage(quizbg, 0, 0);
-    quizbg.src = "Images/quizbg.png";
-    canvas.addEventListener('click',ProcessClick,false);
-    SetQuestions();
+    //context.drawImage(quizbg, 0, 0);
+    //quizbg.src = "Images/quizbg.png";
+    //canvas.addEventListener('click',ProcessClick,false);
+    //SetQuestions();
+    document.getElementById('quizButton1').style.visibility = 'visible';
+    document.getElementById('quizButton2').style.visibility = 'visible';
+    document.getElementById('quizButton3').style.visibility = 'visible';
 }
 UnloadImage = function(){
     document.getElementById('SolenButton').style.visibility = 'visible';
@@ -59,92 +66,96 @@ UnloadImage = function(){
     document.getElementById('PlutoButton').style.visibility = 'visible';
 
     document.getElementById("'"+currentPlanet+"'").style.visibility = 'hidden';
+    document.getElementById('quizButton1').style.visibility = 'hidden';
+    document.getElementById('quizButton2').style.visibility = 'hidden';
+    document.getElementById('quizButton3').style.visibility = 'hidden';
     document.body.style.backgroundImage = "url('Images/Map2.png')";
 }
 
 
-SetQuestions = function(){
-    Question=questions[qnumber];
-    CorrectAnswer=1+Math.floor(Math.random()*3);
-    if(CorrectAnswer==1){Option1=answers[qnumber][0];Option2=answers[qnumber][1];Option3=answers[qnumber][2];}
-    if(CorrectAnswer==2){Option1=answers[qnumber][2];Option2=answers[qnumber][0];Option3=answers[qnumber][1];}
-    if(CorrectAnswer==3){Option1=answers[qnumber][1];Option2=answers[qnumber][2];Option3=answers[qnumber][0];}
-    context.textBaseline = "middle";
-	context.font = "24pt Calibri,Arial";
-	context.fillText(Question,20,textpos1);
-	context.font = "18pt Calibri,Arial";
-	context.fillText(Option1,20,textpos2);
-	context.fillText(Option2,20,textpos3);
-	context.fillText(Option3,20,textpos4);
-}
+// SetQuestions = function(){
+//     Question=questions[qnumber];
+//     CorrectAnswer=1+Math.floor(Math.random()*3);
+//     if(CorrectAnswer==1){Option1=answers[qnumber][0];Option2=answers[qnumber][1];Option3=answers[qnumber][2];}
+//     if(CorrectAnswer==2){Option1=answers[qnumber][2];Option2=answers[qnumber][0];Option3=answers[qnumber][1];}
+//     if(CorrectAnswer==3){Option1=answers[qnumber][1];Option2=answers[qnumber][2];Option3=answers[qnumber][0];}
+//     context.textBaseline = "middle";
+// 	context.font = "24pt Calibri,Arial";
+// 	context.fillText(Question,20,textpos1);
+// 	context.font = "18pt Calibri,Arial";
+// 	context.fillText(Option1,20,textpos2);
+// 	context.fillText(Option2,20,textpos3);
+// 	context.fillText(Option3,20,textpos4);
+// }
 
 
-function ProcessClick(ev) {
-	my=ev.y-canvas.offsetTop;
-    if(ev.y == undefined){
-		my = ev.pageY - canvas.offsetTop;
-	}
-	if(lock){
-		ResetQ();
-	}//if lock
-	else{
-		if(my>110 && my<180){GetFeedback(1);}
-		if(my>200 && my<270){GetFeedback(2);}
-		if(my>290 && my<360){GetFeedback(3);}
-	}//!lock
-}//ProcessClick
+// function ProcessClick(ev) {
+// 	my=ev.y-canvas.offsetTop;
+//     if(ev.y == undefined){
+// 		my = ev.pageY - canvas.offsetTop;
+// 	}
+// 	if(lock){
+// 		ResetQ();
+// 	}//if lock
+// 	else{
+// 		if(my>110 && my<180){GetFeedback(1);}
+// 		if(my>200 && my<270){GetFeedback(2);}
+// 		if(my>290 && my<360){GetFeedback(3);}
+// 	}//!lock
+// }//ProcessClick
 
-GetFeedback = function(answer){
-	if(answer==CorrectAnswer){
-	  	context.drawImage(quizbg, 0,400,75,70,480,110+(90*(answer-1)),75,70);
-		rightanswers++;
-		//drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
-	}
-	else{
-	    context.drawImage(quizbg, 75,400,75,70,480,110+(90*(answer-1)),75,70);
-		wronganswers++;
-	}
-	lock=true;
-	context.font = "14pt Calibri,Arial";
-	context.fillText("Klicka igen för att fortsätta",20,380);
-}//get feedback
+// GetFeedback = function(answer){
+// 	if(answer==CorrectAnswer){
+// 	  	context.drawImage(quizbg, 0,400,75,70,480,110+(90*(answer-1)),75,70);
+// 		rightanswers++;
+// 		//drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+// 	}
+// 	else{
+// 	    context.drawImage(quizbg, 75,400,75,70,480,110+(90*(answer-1)),75,70);
+// 		wronganswers++;
+// 	}
+// 	lock=true;
+// 	context.font = "14pt Calibri,Arial";
+// 	context.fillText("Klicka igen för att fortsätta",20,380);
+// }//get feedback
 
-ResetQ= function(){
-	lock=false;
-	context.clearRect(0,0,550,400);
-	qnumber++;
+// ResetQ= function(){
+// 	lock=false;
+// 	context.clearRect(0,0,550,400);
+// 	qnumber++;
 
-	var pictureUrl = BackgroundPictures[picturecounter];
-	document.body.style.backgroundImage = "url('"+pictureUrl+"')";
-	picturecounter++;
+// 	var pictureUrl = BackgroundPictures[picturecounter];
+// 	document.body.style.backgroundImage = "url('"+pictureUrl+"')";
+// 	picturecounter++;
 	
 
-	if(qnumber==Questions.length){EndQuiz();}
-	else{
-		context.drawImage(quizbg, 0, 0);
-		SetQuestions();}
-}
+// 	if(qnumber==Questions.length){EndQuiz();}
+// 	else{
+// 		context.drawImage(quizbg, 0, 0);
+// 		SetQuestions();}
+// }
 
-EndQuiz=function(){
-	//document.getElementById('button1').style.visibility = 'visible';
-	canvas.removeEventListener('click',ProcessClick,false);
-	context.drawImage(quizbg, 0,0,550,90,0,0,550,400);
-	context.font = "20pt Calibri,Arial";
-	context.fillText("Du är klar med quizen!",20,100);
-	context.font = "16pt Calibri,Arial";
-	context.fillText("Rätta svar: "+String(rightanswers),20,200);
-    context.fillText("Fel svar: "+String(wronganswers),20,240);
-    UnloadImage();
-}
+// EndQuiz=function(){
+// 	//document.getElementById('button1').style.visibility = 'visible';
+// 	canvas.removeEventListener('click',ProcessClick,false);
+// 	context.drawImage(quizbg, 0,0,550,90,0,0,550,400);
+// 	context.font = "20pt Calibri,Arial";
+// 	context.fillText("Du är klar med quizen!",20,100);
+// 	context.font = "16pt Calibri,Arial";
+// 	context.fillText("Rätta svar: "+String(rightanswers),20,200);
+//     context.fillText("Fel svar: "+String(wronganswers),20,240);
+//     UnloadImage();
+// }
 
 
 Sun = function(){
     questions = ["x", "y", "z"];
     answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
+    correctAnswers = ["x", "y", "z"];
     var image = "Images/Planets/Sun.jpg";
     currentPlanet = "Sun";
     LoadImage(image);
-
+    SetupQuiz(questions, answers);
 }
 
 Mercury = function(){
@@ -220,17 +231,38 @@ Pluto = function(){
 }
 
 
+SetupQuiz = function(questions, answer){
+    var button1 = document.getElementById('quizButton1');
+    var button2 = document.getElementById('quizButton2');
+    var button3 = document.getElementById('quizButton3');
+    var ans1 = answer[qnumber][0];
+    var ans2 = answer[qnumber][1];
+    var ans3 = answer[qnumber][2];
+    button1.innerHTML = ans1;
+    button2.innerHTML = ans2;
+    button3.innerHTML = ans3;
 
+    context.textBaseline = "middle";
+	context.font = "24pt Calibri,Arial";
+	context.fillText(questions[qnumber],20,50);
+}
 
 
 Click= function(id){
-   var elem = document.getElementById(id)
-    alert(id);
+    //kolla om svaret var rätt
+    if(id == correctAnswers[qnumber]){
+        rightanswers++;
+    } else {
+        wronganswers++;
+    }
+    
+    qnumber++;
+    if(qnumber => 3){
+        qnumber = 0;
+        //göm knappar, ta bort quizmaterial osv.
+    }
     
     
-    elem.innerHTML="nytt svar?"
-    
-
 
 }
  }

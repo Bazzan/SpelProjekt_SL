@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<script src="JavaScrpit/JS.js"></script>
+<script src="JavaScrpit/GameScript.js"></script>
 
 
 <h1> Insert Game -></h1>
@@ -17,80 +17,90 @@
 om ni kollar i CSS filen så har jag gjort knappen rund (boarder-radius: 50%) och sen
 när man ska placera ut knapparna så använder man margin, gå in i debug och markera margin [ X px]
 och använd upp och ned pilarna på tangentbordet för att flytta runt elementet :D -->
-<button type="button" id="SunButton" name="SunButton" onclick="PlingPlong()"  >
+<!-- <button type="button" id="SunButton" name="SunButton" onclick="PlingPlong()"  >
     <img src="IMG/Icon.png" height="100%" width="100%"/>
     
+</button> -->
+
+<button type="button"
+id="SolenButton"
+name="SolenButton"
+onclick="Sun()"  >
 </button>
 
-<button type="button" id="MerkuriusButton" name="MerkuriusButton" onclick="PlingPlong()"  >
+<button type="button"
+id="MerkuriusButton"
+name="MerkuriusButton"
+onclick="Mercury()"  >
     <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
-    
-</button>
-<button type="button" id="VenusButton" name="VenusButton" onclick="PlingPlong()"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
-    
 </button>
 
-<button type="button" id="JordenButton" name="JordenButton" onclick="PlingPlong()"  >
+<button type="button"
+id="VenusButton"
+name="VenusButton"
+onclick="Venus()"  >
     <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
-    
+</button>
+
+<button type="button"
+id="JordenButton"
+name="JordenButton"
+onclick="Earth()"  >
+    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
+</button>
+
+<button type="button"
+id="ISSButton"
+name="ISSButton"
+onclick="ISS()"  >
+</button>
+
+<button type="button"
+id="MarsButton"
+name="MarsButton"
+onclick="Mars()"  >
+    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
+</button>
+
+<button type="button"
+id="JupiterButton"
+name="JupiterButton"
+onclick="Jupiter()"  >
+    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
+</button>
+
+<button type="button"
+id="SaturnusButton"
+name="SaturnusButton"
+onclick="Saturn()"  >
+    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
 </button>
 
 
-<button type="button" id="MarsButton" name="MarsButton" onclick="PlingPlong()"  >
+<button type="button"
+id="UranusButton"
+name="UranusButton"
+onclick="Uranus()"  >
     <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
-    
 </button>
 
-<button type="button" id="JupiterButton" name="JupiterButton" onclick="PlingPlong()"  >
+<button type="button"
+id="NeptunusButton"
+name="NeptunusButton"
+onclick="Neptune()"  >
     <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
-    
 </button>
 
-<button type="button" id="SaturnusButton" name="SaturnusButton" onclick="PlingPlong()"  >
+<button type="button"
+id="PlutoButton"
+name="PlutoButton"
+onclick="Pluto()"  >
     <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
-    
-</button>
-
-
-<button type="button" id="UranusButton" name="UranusButton" onclick="PlingPlong()"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
-    
-</button>
-
-<button type="button" id="NeptunusButton" name="NeptunusButton" onclick="PlingPlong()"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
-    
-</button>
-
-<button type="button" id="PlutoButton" name="PlutoButton" onclick="PlingPlong()"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
-    
 </button>
 
 <div id="d1" name="d1" >
-    <canvas id="QuizWindow" name="QuizWindow"  >
-        <style>
-        #d1{
-            background-color: blueviolet;
-            top:0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-        }      
-         </style>
-    </canvas>
+        <canvas id="QuizWindow" width="550" height="400"> </canvas>
 </div>
-<!-- <canvas id="QuizWindow" name="QuizWindow"  >
 
-    </canvas> -->
-
-<script>
-PlingPlong = function(){
-    alert("plingplong");
-    document.getElementById("SunButton").style.visibility = "hidden";
-}
-
-
-</script>
 </body>
+</html>

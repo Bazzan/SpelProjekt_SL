@@ -4,12 +4,12 @@ body, h1, div, p, input, button, #button2, #my_centered_buttons, h1 #SunButton, 
 }
 
 body, html{
+	background-image: url("../Images/Map2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	height: 100%;
 	width: 100%;
-	background-image:url("../Images/Map2.png");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	/* background-size: cover; */
 }
 
 h1{
@@ -75,7 +75,7 @@ button {
 	text-align: center;
 	font-size: 16px;
 }
-#SunButton {
+#SolenButton {
     background-color: transparent;
 
     margin-top: -45px;

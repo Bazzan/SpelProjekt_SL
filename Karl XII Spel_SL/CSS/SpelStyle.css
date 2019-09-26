@@ -1,4 +1,4 @@
-body, h1, div, p, input, button, #button2, #my_centered_buttons, h1 #SunButton{
+body, h1, div, p, input, button, #button2, #my_centered_buttons, h1 #SunButton, #MerkuriusButton,#VenusButton,#JordenButton,#MarsButton,#JupiterButton,#SaturnusButton,#UranusButton, #NeptunusButton, #PlutoButton{
     margin: 0;
     padding: 0;
 }

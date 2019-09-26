@@ -1,15 +1,17 @@
-body, h1, div, p, input, button, #button2, #my_centered_buttons, h1 #SunButton, #MerkuriusButton,#VenusButton,#JordenButton,#MarsButton,#JupiterButton,#SaturnusButton,#UranusButton, #NeptunusButton, #PlutoButton{
+body, h1, div, p, input, button, #button2, #my_centered_buttons, h1 
+#SunButton, #MerkuriusButton,#VenusButton,#JordenButton,#MarsButton,
+#JupiterButton,#SaturnusButton,#UranusButton, #NeptunusButton, #PlutoButton{
     margin: 0;
     padding: 0;
 }
 
 body, html{
-	background-image: url("../Images/Map2.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
 	height: 100%;
 	width: 100%;
+	background-image:url("../Images/Map2.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	/* background-size: cover; */
 }
 
 h1{
@@ -142,6 +144,21 @@ button {
 	/* display: inline-block; */
 }
 
+#ISSButton {
+    background-color: transparent;
+	margin-top: 465px;
+    margin-left: 688px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: rgb(255, 153, 0);
+    border-top-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+	/* display: inline-block; */
+}
 
 #MarsButton {
     background-color: transparent;

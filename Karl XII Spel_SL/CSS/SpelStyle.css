@@ -1,4 +1,4 @@
-body, h1, div, p, input, button, #button2, #my_centered_buttons, h1 {
+body, h1, div, p, input, button, #button2, #my_centered_buttons, h1 #SunButton{
     margin: 0;
     padding: 0;
 }
@@ -6,10 +6,10 @@ body, h1, div, p, input, button, #button2, #my_centered_buttons, h1 {
 body, html{
 	height: 100%;
 	width: 100%;
-	background-image:url("../Images/Map.png");
+	background-image:url("../Images/Map2.png");
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	background-size: cover;
+	/* background-size: cover; */
 }
 
 h1{
@@ -74,24 +74,177 @@ button {
 	padding: 8px 16px;
 	text-align: center;
 	font-size: 16px;
-    border: none;
 }
 #SunButton {
-    background-color:white;
-    /* outline:none; */
-	/* padding: none; */
-	/* border: none; */
-    margin-top: 17%;
-    margin-left: 13.5px;
-    width: 392px;
-    height: 380px;
-	position: relative;
+    background-color: transparent;
+
+    margin-top: -45px;
+    margin-left: 26.5px;
+    width: 250px;
+    height: 250px;
+	position: absolute;
 	border-radius: 50%;
-	
+	border-color: magenta;
+	border-top-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
 	/* display: inline-block; */
-	
-	
+
 }
+
+#MerkuriusButton {
+    background-color: transparent;
+
+    margin-top: 81px;
+    margin-left: 409.5px;
+    width: 100px;
+    height: 100px;
+	position: absolute;
+	border-radius: 50%;
+	border-color: rgb(0, 255, 0);
+	border-top-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+	/* display: inline-block; */
+}
+#VenusButton {
+    background-color: transparent;
+
+	margin-top: 458px;
+    margin-left: 151.5px;
+    width: 165px;
+    height: 165px;
+	position: absolute;
+	border-radius: 50%;
+	border-color: rgb(217, 255, 0);
+	border-top-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+	/* display: inline-block; */
+}
+
+#JordenButton {
+    background-color: transparent;
+    margin-top: 396px;
+    margin-left: 508px;
+    width: 165px;
+    height: 165px;
+	position: absolute;
+	border-radius: 50%;
+	border-color: rgb(255, 153, 0);
+	border-top-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+	/* display: inline-block; */
+}
+
+
+#MarsButton {
+    background-color: transparent;
+	margin-top: 264px;
+    margin-left: 767px;
+    width: 120px;
+    height: 120px;
+	position: absolute;
+	border-radius: 50%;
+	border-color: rgb(4, 114, 0);
+	border-top-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+	/* display: inline-block; */
+}
+
+
+#JupiterButton {
+    background-color: transparent;
+	margin-top: 541px;
+    margin-left: 858px;
+    width: 240px;
+    height: 240px;
+	position: absolute;
+	border-radius: 50%;
+	border-color: rgb(0, 247, 255);
+	border-top-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+	/* display: inline-block; */
+}
+
+
+#SaturnusButton {
+    background-color: transparent;
+    margin-top: 91px;
+    margin-left: 1094px;
+    width: 190px;
+    height: 190px;
+	position: absolute;
+	border-radius: 50%;
+	border-color: rgb(0, 247, 255);
+	border-top-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+	/* display: inline-block; */
+}
+
+
+#UranusButton {
+    background-color: transparent;
+	margin-top: 382px;
+    margin-left: 1338px;
+    width: 150px;
+    height: 150px;
+	position: absolute;
+	border-radius: 50%;
+	border-color: rgb(0, 247, 255);
+	border-top-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+	/* display: inline-block; */
+}
+
+#NeptunusButton {
+    background-color: transparent;
+	margin-top: 91px;
+    margin-left: 1514px;
+    width: 150px;
+    height: 150px;
+	position: absolute;
+	border-radius: 50%;
+	border-color: rgb(5, 204, 95);
+	border-top-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+	/* display: inline-block; */
+}
+
+#PlutoButton {
+    background-color: transparent;
+	margin-top: 28px;
+    margin-left: 1695px;
+    width: 90px;
+    height: 90px;
+	position: absolute;
+	border-radius: 50%;
+	border-color: rgb(5, 204, 95);
+	border-top-width: 20px;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+	/* display: inline-block; */
+}
+
+
+
+
 
 /* 
 document.onmousemove = function(e){

@@ -69,7 +69,7 @@ UnloadImage = function(){
     document.getElementById('quizButton1').style.visibility = 'hidden';
     document.getElementById('quizButton2').style.visibility = 'hidden';
     document.getElementById('quizButton3').style.visibility = 'hidden';
-    document.body.style.backgroundImage = "url('Images/Map2.png')";
+    document.body.style.backgroundImage = "url('Images\Map2.png')";
 }
 
 
@@ -148,15 +148,7 @@ UnloadImage = function(){
 // }
 
 
-Sun = function(){
-    questions = ["x", "y", "z"];
-    answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
-    correctAnswers = ["x", "y", "z"];
-    var image = "Images/Planets/Sun.jpg";
-    currentPlanet = "Sun";
-    LoadImage(image);
-    SetupQuiz(questions, answers);
-}
+
 
 Mercury = function(){
     var questions = ["x", "y", "z"];
@@ -230,37 +222,69 @@ Pluto = function(){
     LoadImage(image);
 }
 
+Sun = function(){
+    questions = ["Hur många gånger mer väger solen än Jorden?", "Hur varm är mitten av solen?", 
+    "Ungefär hur många minuter tar det för solens ljus strålar att nå Jorden?"];
 
-SetupQuiz = function(questions, answer){
+    answers = [["333,000 gånger mer än Jorden", "15,000 gånger mer än Jorden", 
+    "100,000,000 gånger mer än Jorden"], 
+    ["180,000 c°", "15,000,000 c°", "20,000 c°"],
+     ["3", "15", "8"]];
+    correctAnswers = ["333,000 gånger mer än Jorden", "15,000,000 c°", "8"];
+    var image = "Images/Planets/Sun.jpg";
+    currentPlanet = "Sun";
+    LoadImage(image);
+    SetupQuiz();
+}
+
+SetupQuiz = function(){
     var button1 = document.getElementById('quizButton1');
     var button2 = document.getElementById('quizButton2');
     var button3 = document.getElementById('quizButton3');
-    var ans1 = answer[qnumber][0];
-    var ans2 = answer[qnumber][1];
-    var ans3 = answer[qnumber][2];
+    var ans1 = answers[qnumber][0];
+    var ans2 = answers[qnumber][1];
+    var ans3 = answers[qnumber][2];
     button1.innerHTML = ans1;
     button2.innerHTML = ans2;
     button3.innerHTML = ans3;
+    button1.value = ans1;
+    button2.value = ans2;
+    button3.value =ans3;
 
+
+    context.clearRect(0,0, canvas.clientWidth, canvas.height);
     context.textBaseline = "middle";
 	context.font = "24pt Calibri,Arial";
 	context.fillText(questions[qnumber],20,50);
 }
 
 
+
 Click= function(id){
     //kolla om svaret var rätt
-    if(id == correctAnswers[qnumber]){
+    var buttonValue = document.getElementById(id).value;
+
+    if(buttonValue == correctAnswers[qnumber]){
+        alert("du hade rätt" + buttonValue);
         rightanswers++;
     } else {
+        alert("rätt svar är: " + correctAnswers[qnumber]);
         wronganswers++;
     }
     
-    qnumber++;
-    if(qnumber => 3){
+
+    if(qnumber == 2){
         qnumber = 0;
+        UnloadImage();
         //göm knappar, ta bort quizmaterial osv.
+    }else{
+        qnumber++;
+        SetupQuiz();
+        
     }
+
+
+
     
     
 

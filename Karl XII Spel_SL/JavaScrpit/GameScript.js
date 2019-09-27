@@ -151,72 +151,116 @@ UnloadImage = function(){
 
 
 Mercury = function(){
-    var questions = ["x", "y", "z"];
-    var answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
+     questions = ["Hur långt från Jorden ligger Merkurius?", 
+    "Varifrån har Merkurius fått sitt namn?",
+     "Hur lång tid tar det för Merkurius att göra ett omlopp kring solen?"];
+     answers = [["77,000,000 kilometer", "19,000 kilometer", "158,000,000 kilometer"], 
+    ["Från den romerska guden av handel och köpmän", "Från grundämnet kvicksilvers engelska namn",
+     "Från en superhjälte i Marvels serietidningar"],
+     ["88 dagar", "12 dagar", "123 dagar"]];
     var image = "Images/Planets/Merkurius.jpg";
     currentPlanet = "Mercury";
     LoadImage(image);
 }
 Venus = function(){
-    var questions = ["x", "y", "z"];
-    var answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
+     questions = [" Hur många månar har Venus?",
+     "Venus har ett annat smeknamn på flertalet språk. Vilket?", 
+     "Hur varmt är det på Venus?"];
+     answers = [["0 ", "1", "2"],
+     ["Polstjärnan", "Morgonstjärna / Aftonstjärna", "Nordstjärnan"], 
+     ["+30 grader", "+200 grader", "+500 grader"]];
     var image = "Images/Planets/Venus.jpg";
     currentPlanet = "Venus";
     LoadImage(image);
 }
 Earth = function(){
-    var questions = ["x", "y", "z"];
-    var answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
+     questions = ["Vad heter jordens högsta berg?",
+     "Hur många människor bor det på jorden?", 
+     "Hur lång tid tar det att åka bil runt hela jorden?"];
+     answers = [["Mount Rushmore", "K2", "Mount Everest"],
+     ["5 miljarder", "7 miljarder", "10 miljarder"], 
+     ["11 dagar", "17 dagar", "23 dagar"]];
     var image = "Images/Planets/Earth.jpg";
     currentPlanet = "Earth";
     LoadImage(image);
 }
 ISS = function(){
-    var questions = ["x", "y", "z"];
-    var answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
+     questions = ["När skickades Internationella Rymdstationen upp i omlopp?", 
+    "Hur många astronauter bor på stationen samtidigt?",
+     "2006 åkte den förste svensken i rymden till ISS. Vad hette han?"];
+     answers = [["1945", "1969", "1998"],
+     ["3-6", "10-15", "25-30"],
+      ["Christer Fuglesang", "Kalle Persson", "Mikael Persbrandt"]];
     var image = "Images/Planets/ISS.jpg";
     currentPlanet = "ISS";
     LoadImage(image);
 }
 Mars = function(){
-    var questions = ["x", "y", "z"];
-    var answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
+     questions = ["Varifrån kommer Mars karaktäristiska röda färg?",
+     "2012 landade en liten rymdsond på Mars, med uppgift att leta efter livstecken. Vad heter den?", 
+     "Mars har två små månar i omlopp. Vad heter månarna?"];
+     answers = [["Den uppstår för att ljuset bryts på ett speciellt sätt på Mars yta",
+     "Den beror på att Mars yta är täckt av järnoxid, alltså rost", 
+     "Mars atmosfär är täckt av gaser som ger illusionen av en röd färg"],
+     ["Explorer", "Curiosity", "Wanderer"], 
+     ["Phobos och Deimos", "Cordelia och Ophelia", "Piff och Puff"]];
     var image = "Images/Planets/Mars.jpg";
     currentPlanet = "Mars";
     LoadImage(image);
 }
 Jupiter = function(){
-    var questions = ["x", "y", "z"];
-    var answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
+     questions = ["Jupiters yta är inte densamma som de andra planeterna i solsystemet. Vad består Jupiter av?",
+      "När man ser på Jupiter kan man se en stor cirkel på planeten. Vad kallas denna cirkel?", 
+      "Jupiter är den största planeten i solsystemet. Ungefär hur stor är Jupiters diameter?"];
+     answers = [["Gas", "Is", "Kvicksand"], 
+     ["Stora röda fläcken", "Jupiters öga", "Stormringen"], 
+     ["140,000 km", "231,000 km", "80,000 km"]];
     var image = "Images/Planets/Jupiter.jpg";
     currentPlanet = "Jupiter";
     LoadImage(image);
 }
 Saturn = function(){
-    var questions = ["x", "y", "z"];
-    var answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
+     questions = ["Vad består Saturnus ringar av?", 
+     "Hur många månar har Saturnus?",
+      "1980 och 1981 anlände två rymdsonder till Saturnus för att undersöka och samla material till forskning. Vad hette de två sonderna?"];
+     answers = [["Is och komet fragment", "Sand och metallpartiklar", "Gaser"],
+      ["12", "62", "43"],
+       ["Voyager 1 och Voyager 2", "Opportunity och Discovery", "New Horizons och Adventurer"]];
     var image = "Images/Planets/Saturn.jpg";
     currentPlanet = "Saturn";
     LoadImage(image);
 }
 
 Uranus = function(){
-    var questions = ["x", "y", "z"];
-    var answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
+     questions = ["Uranus ligger 3,000,000,000 kilometer från Jorden. Ungefär hur lång tid skulle det ta att köra dit med bil?",
+      "Uranus har den kallaste atmosfären av alla planeter i solsystemet. Vad är medeltemperaturen i dess atmosfär?", 
+      "Uranus har en lutning på ungefär 98°, jämfört med Jordens 23,4°. Det ger ganska märkliga dygn och årstider, ett dygn varierar mellan 17 timmar till 42 jordår. Hur lång är vintern på Uranus?"];
+     answers = [["150 år", "19000 år", "3000 år"],
+      ["-122 c°", "-2000 c°", "-224 c°"],
+       ["3 jordår", "129 jordår", "42 jordår"]];
     var image = "Images/Planets/Uranus.jpg";
     currentPlanet = "Uranus";
     LoadImage(image);
 }
 Neptune = function(){
-    var questions = ["x", "y", "z"];
-    var answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
+     questions = ["Varför är Neptunus blå?",
+      "Hur många månar har Neptunus?",
+       "Hur lång tid tar det för neptunus att rotera runt solen? "];
+     answers = [["Den består av vatten.", "Den består av gaser, som gör den blå.", 
+     "Den får inget solljus och blir blå pga detta."],
+      ["1", "6", "14"],
+       ["32 år", "57 år", "165 år"]];
     var image = "Images/Planets/Neptune.jpg";
     currentPlanet = "Neptune";
     LoadImage(image);
 }
 Pluto = function(){
-    var questions = ["x", "y", "z"];
-    var answers = [["x", "y", "z"], ["x", "y", "z"], ["x", "y", "z"]];
+     questions = ["När upptäcktes Pluto?",
+      "Varifrån har Pluto fått sitt namn?",
+       "Pluto är egentligen inte en planet som de andra i solsystemet. Vad är Pluto egentligen för sorts himlakropp?"];
+     answers = [["1845", "1930", "1671"], 
+     ["Från Musse Piggs hundkompis", "Från den romerska guden för underjorden", "Pluto är radioaktiv så namnet togs från det radioaktiva ämnet plutonium"],
+      ["En asteroid", "En dvärgplanet", "En måne"]];
     var image = "Images/Planets/Pluto.jpg";
     currentPlanet = "Pluto";
     LoadImage(image);

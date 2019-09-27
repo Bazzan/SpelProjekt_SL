@@ -161,6 +161,7 @@ Mercury = function(){
     var image = "Images/Planets/Merkurius.jpg";
     currentPlanet = "Mercury";
     LoadImage(image);
+    SetupQuiz();
 }
 Venus = function(){
      questions = [" Hur många månar har Venus?",
@@ -172,6 +173,7 @@ Venus = function(){
     var image = "Images/Planets/Venus.jpg";
     currentPlanet = "Venus";
     LoadImage(image);
+    SetupQuiz();
 }
 Earth = function(){
      questions = ["Vad heter jordens högsta berg?",
@@ -183,6 +185,7 @@ Earth = function(){
     var image = "Images/Planets/Earth.jpg";
     currentPlanet = "Earth";
     LoadImage(image);
+    SetupQuiz();
 }
 ISS = function(){
      questions = ["När skickades Internationella Rymdstationen upp i omlopp?", 
@@ -194,6 +197,7 @@ ISS = function(){
     var image = "Images/Planets/ISS.jpg";
     currentPlanet = "ISS";
     LoadImage(image);
+    SetupQuiz();
 }
 Mars = function(){
      questions = ["Varifrån kommer Mars karaktäristiska röda färg?",
@@ -207,6 +211,7 @@ Mars = function(){
     var image = "Images/Planets/Mars.jpg";
     currentPlanet = "Mars";
     LoadImage(image);
+    SetupQuiz();
 }
 Jupiter = function(){
      questions = ["Jupiters yta är inte densamma som de andra planeterna i solsystemet. Vad består Jupiter av?",
@@ -218,6 +223,7 @@ Jupiter = function(){
     var image = "Images/Planets/Jupiter.jpg";
     currentPlanet = "Jupiter";
     LoadImage(image);
+    SetupQuiz();
 }
 Saturn = function(){
      questions = ["Vad består Saturnus ringar av?", 
@@ -229,6 +235,7 @@ Saturn = function(){
     var image = "Images/Planets/Saturn.jpg";
     currentPlanet = "Saturn";
     LoadImage(image);
+    SetupQuiz();
 }
 
 Uranus = function(){
@@ -241,6 +248,7 @@ Uranus = function(){
     var image = "Images/Planets/Uranus.jpg";
     currentPlanet = "Uranus";
     LoadImage(image);
+    SetupQuiz();
 }
 Neptune = function(){
      questions = ["Varför är Neptunus blå?",
@@ -253,6 +261,9 @@ Neptune = function(){
     var image = "Images/Planets/Neptune.jpg";
     currentPlanet = "Neptune";
     LoadImage(image);
+    
+    SetupQuiz();
+
 }
 Pluto = function(){
      questions = ["När upptäcktes Pluto?",
@@ -264,6 +275,8 @@ Pluto = function(){
     var image = "Images/Planets/Pluto.jpg";
     currentPlanet = "Pluto";
     LoadImage(image);
+    SetupQuiz();
+
 }
 
 Sun = function(){

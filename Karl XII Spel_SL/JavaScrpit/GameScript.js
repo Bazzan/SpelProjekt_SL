@@ -65,11 +65,12 @@ UnloadImage = function(){
     document.getElementById('NeptunusButton').style.visibility = 'visible';
     document.getElementById('PlutoButton').style.visibility = 'visible';
 
-    document.getElementById("'"+currentPlanet+"'").style.visibility = 'hidden';
+    document.getElementById(currentPlanet).style.visibility = 'hidden';
     document.getElementById('quizButton1').style.visibility = 'hidden';
     document.getElementById('quizButton2').style.visibility = 'hidden';
     document.getElementById('quizButton3').style.visibility = 'hidden';
-    document.body.style.backgroundImage = "url('Images\Map2.png')";
+    document.body.style.backgroundImage = "url('Images/Map2.png')";
+    context.clearRect(0, 0, canvas.width, canvas.height)
 }
 
 
@@ -158,8 +159,9 @@ Mercury = function(){
     ["Från den romerska guden av handel och köpmän", "Från grundämnet kvicksilvers engelska namn",
      "Från en superhjälte i Marvels serietidningar"],
      ["88 dagar", "12 dagar", "123 dagar"]];
-    var image = "Images/Planets/Merkurius.jpg";
-    currentPlanet = "Mercury";
+    correctAnswers = ["77,000,000 kilometer", "Från den romerska guden av handel och köpmän", "88 dagar"];
+    var image = "Images/Planets/Merkurius.png";
+    currentPlanet = "MerkuriusButton";
     LoadImage(image);
     SetupQuiz();
 }
@@ -168,10 +170,11 @@ Venus = function(){
      "Venus har ett annat smeknamn på flertalet språk. Vilket?", 
      "Hur varmt är det på Venus?"];
      answers = [["0 ", "1", "2"],
-     ["Polstjärnan", "Morgonstjärna / Aftonstjärna", "Nordstjärnan"], 
-     ["+30 grader", "+200 grader", "+500 grader"]];
+     ["Polstjärnan", "Morgonstjärnan / Aftonstjärnan", "Nordstjärnan"], 
+     ["+30 grader", "+200 grader", "+450 grader"]];
+     correctAnswers = ["0", "Morgonstjärnan / Aftonstjärnan", "+450 grader"];
     var image = "Images/Planets/Venus.jpg";
-    currentPlanet = "Venus";
+    currentPlanet = "VenusButton";
     LoadImage(image);
     SetupQuiz();
 }
@@ -182,8 +185,9 @@ Earth = function(){
      answers = [["Mount Rushmore", "K2", "Mount Everest"],
      ["5 miljarder", "7 miljarder", "10 miljarder"], 
      ["11 dagar", "17 dagar", "23 dagar"]];
+    correctAnswers = ["Mount Everest", "10 miljarder", "17 dagar"];
     var image = "Images/Planets/Earth.jpg";
-    currentPlanet = "Earth";
+    currentPlanet = "JordenButton";
     LoadImage(image);
     SetupQuiz();
 }
@@ -194,8 +198,9 @@ ISS = function(){
      answers = [["1945", "1969", "1998"],
      ["3-6", "10-15", "25-30"],
       ["Christer Fuglesang", "Kalle Persson", "Mikael Persbrandt"]];
+    correctAnswers = ["1998", "3-6", "Christer Fuglesang"];
     var image = "Images/Planets/ISS.jpg";
-    currentPlanet = "ISS";
+    currentPlanet = "ISSButton";
     LoadImage(image);
     SetupQuiz();
 }
@@ -208,8 +213,9 @@ Mars = function(){
      "Mars atmosfär är täckt av gaser som ger illusionen av en röd färg"],
      ["Explorer", "Curiosity", "Wanderer"], 
      ["Phobos och Deimos", "Cordelia och Ophelia", "Piff och Puff"]];
-    var image = "Images/Planets/Mars.jpg";
-    currentPlanet = "Mars";
+    correctAnswers = ["Den beror på att Mars yta är täckt av järnoxid, alltså rost", "Curiosity", "Phobos och Deimos"];
+    var image = "Images/Planets/Mars.png";
+    currentPlanet = "MarsButton";
     LoadImage(image);
     SetupQuiz();
 }
@@ -220,8 +226,9 @@ Jupiter = function(){
      answers = [["Gas", "Is", "Kvicksand"], 
      ["Stora röda fläcken", "Jupiters öga", "Stormringen"], 
      ["140,000 km", "231,000 km", "80,000 km"]];
+    correctAnswers = ["Gas", "Stora röda fläcken", "140,000 km"];
     var image = "Images/Planets/Jupiter.jpg";
-    currentPlanet = "Jupiter";
+    currentPlanet = "JupiterButton";
     LoadImage(image);
     SetupQuiz();
 }
@@ -229,11 +236,12 @@ Saturn = function(){
      questions = ["Vad består Saturnus ringar av?", 
      "Hur många månar har Saturnus?",
       "1980 och 1981 anlände två rymdsonder till Saturnus för att undersöka och samla material till forskning. Vad hette de två sonderna?"];
-     answers = [["Is och komet fragment", "Sand och metallpartiklar", "Gaser"],
+     answers = [["Is och kometfragment", "Sand och metallpartiklar", "Gaser"],
       ["12", "62", "43"],
        ["Voyager 1 och Voyager 2", "Opportunity och Discovery", "New Horizons och Adventurer"]];
+    correctAnswers = ["Is och kometfragment", "62", "Voyager 1 och Voyager 2"];
     var image = "Images/Planets/Saturn.jpg";
-    currentPlanet = "Saturn";
+    currentPlanet = "SaturnusButton";
     LoadImage(image);
     SetupQuiz();
 }
@@ -245,35 +253,38 @@ Uranus = function(){
      answers = [["150 år", "19000 år", "3000 år"],
       ["-122 c°", "-2000 c°", "-224 c°"],
        ["3 jordår", "129 jordår", "42 jordår"]];
+    correctAnswers = ["3000 år", "-224 c°", "42 jordår"];
     var image = "Images/Planets/Uranus.jpg";
-    currentPlanet = "Uranus";
+    currentPlanet = "UranusButton";
     LoadImage(image);
     SetupQuiz();
 }
 Neptune = function(){
      questions = ["Varför är Neptunus blå?",
       "Hur många månar har Neptunus?",
-       "Hur lång tid tar det för neptunus att rotera runt solen? "];
+       "Hur lång tid tar det för Neptunus att rotera runt solen?"];
      answers = [["Den består av vatten.", "Den består av gaser, som gör den blå.", 
      "Den får inget solljus och blir blå pga detta."],
       ["1", "6", "14"],
        ["32 år", "57 år", "165 år"]];
+    correctAnswers = ["Den består av gaser, som gör den blå.", "14", "165 år"];
     var image = "Images/Planets/Neptune.jpg";
-    currentPlanet = "Neptune";
+    currentPlanet = "NeptunusButton";
     LoadImage(image);
     
     SetupQuiz();
 
 }
 Pluto = function(){
-     questions = ["När upptäcktes Pluto?",
+    questions = ["När upptäcktes Pluto?",
       "Varifrån har Pluto fått sitt namn?",
        "Pluto är egentligen inte en planet som de andra i solsystemet. Vad är Pluto egentligen för sorts himlakropp?"];
-     answers = [["1845", "1930", "1671"], 
+    answers = [["1845", "1930", "1671"], 
      ["Från Musse Piggs hundkompis", "Från den romerska guden för underjorden", "Pluto är radioaktiv så namnet togs från det radioaktiva ämnet plutonium"],
       ["En asteroid", "En dvärgplanet", "En måne"]];
+    correctAnswers = ["1930", "Från den romerska guden för underjorden", "En dvärgplanet"];
     var image = "Images/Planets/Pluto.jpg";
-    currentPlanet = "Pluto";
+    currentPlanet = "PlutoButton";
     LoadImage(image);
     SetupQuiz();
 
@@ -281,7 +292,7 @@ Pluto = function(){
 
 Sun = function(){
     questions = ["Hur många gånger mer väger solen än Jorden?", "Hur varm är mitten av solen?", 
-    "Ungefär hur många minuter tar det för solens ljus strålar att nå Jorden?"];
+    "Ungefär hur många minuter tar det för solens ljusstrålar att nå Jorden?"];
 
     answers = [["333,000 gånger mer än Jorden", "15,000 gånger mer än Jorden", 
     "100,000,000 gånger mer än Jorden"], 
@@ -289,7 +300,7 @@ Sun = function(){
      ["3", "15", "8"]];
     correctAnswers = ["333,000 gånger mer än Jorden", "15,000,000 c°", "8"];
     var image = "Images/Planets/Sun.jpg";
-    currentPlanet = "Sun";
+    currentPlanet = "SolenButton";
     LoadImage(image);
     SetupQuiz();
 }
@@ -311,8 +322,9 @@ SetupQuiz = function(){
 
     context.clearRect(0,0, canvas.clientWidth, canvas.height);
     context.textBaseline = "middle";
-	context.font = "24pt Calibri,Arial";
-	context.fillText(questions[qnumber],20,50);
+    context.font = "20pt Calibri,Arial";
+    context.fillStyle = "#FFFFFF";
+	context.fillText(questions[qnumber],10,50);
 }
 
 
@@ -322,10 +334,10 @@ Click= function(id){
     var buttonValue = document.getElementById(id).value;
 
     if(buttonValue == correctAnswers[qnumber]){
-        alert("du hade rätt" + buttonValue);
+        alert("Du hade rätt!");
         rightanswers++;
     } else {
-        alert("rätt svar är: " + correctAnswers[qnumber]);
+        alert("Du hade fel, rätt svar är: " + correctAnswers[qnumber]);
         wronganswers++;
     }
     

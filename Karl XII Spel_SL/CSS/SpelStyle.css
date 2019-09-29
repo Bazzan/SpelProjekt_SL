@@ -49,7 +49,7 @@ body {
 }
 div{
     border: 3px salmon;
-    width: 30%;
+    width: 100%;
     margin: 5% auto;
 }
 
@@ -274,7 +274,6 @@ button {
     border-bottom-width: 20px;
 	/* display: inline-block; */
 }
-
 
 
 

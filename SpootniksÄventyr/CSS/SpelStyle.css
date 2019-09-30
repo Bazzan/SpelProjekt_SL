@@ -12,14 +12,16 @@ body, h1, div, p, input, button, #button2, #my_centered_buttons, h1, #quizButton
 	padding: 0;
 }
 
+
+
 #pointcounters{
 	position: absolute;
-	z-index: 1;
-	left: 50px;
-	top: 20px;
-	width:100px;
-	height:20px;
-	color: white;
+    z-index: 1;
+    left: 900px;
+    top: 390px;
+    width: 100px;
+    height: 20px;
+    color: white;
 }
 #points{
 	color: white;
@@ -119,113 +121,148 @@ canvas{
 
 #SolenInfo{
 	visibility: hidden;
+	position: absolute;
+    top: 383px;
+    left: 704px;
+
 }
 
 #MerkuriusInfo{
 	visibility: hidden;
+	position: absolute;
+    top: 383px;
+    left: 704px;
 }
 
 #VenusInfo{
 	visibility: hidden;
+	position: absolute;
+    top: 383px;
+    left: 704px;
 }
 #JordenInfo{
 	visibility: hidden;
+	position: absolute;
+    top: 383px;
+    left: 704px;
 }
 #ISSInfo{
 	visibility: hidden;
+	position: absolute;
+    top: 383px;
+    left: 704px;
 }
 #MarsInfo{
 	visibility: hidden;
+	position: absolute;
+    top: 383px;
+    left: 704px;
 }
 #JupiterInfo{
 	visibility: hidden;
+	position: absolute;
+    top: 383px;
+    left: 704px;
 }
 #SaturnusInfo{
 	visibility: hidden;
+	position: absolute;
+    top: 383px;
+    left: 704px;
 }
 #UranusInfo{
 	visibility: hidden;
+	position: absolute;
+    top: 383px;
+    left: 704px;
 }
 #NeptunusInfo{
 	visibility: hidden;
+	position: absolute;
+    top: 383px;
+    left: 704px;
 }
 #PlutoInfo{
 	visibility: hidden;
+	position: absolute;
+    top: 383px;
+    left: 704px;
 }
 
 #SolenButton {
     background-color: transparent;
-
-    margin-top: -45px;
-    margin-left: 26.5px;
-    width: 250px;
-    height: 250px;
-	position: absolute;
-	border-radius: 50%;
-	border-color: magenta;
-	border-top-width: 20px;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
+    left: 14px;
+    top: 14px;
+    margin: 0;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: magenta;
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
 	/* display: inline-block; */
 
 }
 
 #MerkuriusButton {
     background-color: transparent;
-
-    margin-top: 81px;
-    margin-left: 409.5px;
-    width: 100px;
-    height: 100px;
-	position: absolute;
-	border-radius: 50%;
-	border-color: rgb(0, 255, 0);
-	border-top-width: 20px;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
-	/* display: inline-block; */
+	left: 224px;
+    top: 93px;
+    margin: 0;
+    width: 62px;
+    height: 61px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: rgb(0, 255, 0);
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
 }
 #VenusButton {
-    background-color: transparent;
-
-	margin-top: 458px;
-    margin-left: 151.5px;
-    width: 165px;
-    height: 165px;
-	position: absolute;
-	border-radius: 50%;
-	border-color: rgb(217, 255, 0);
-	border-top-width: 20px;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
+	background-color: transparent;
+    left: 94px;
+    top: 295px;
+    margin: 0;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: rgb(217, 255, 0);
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
 	/* display: inline-block; */
 }
 
 #JordenButton {
-    background-color: transparent;
-    margin-top: 396px;
-    margin-left: 508px;
-    width: 165px;
-    height: 165px;
-	position: absolute;
-	border-radius: 50%;
-	border-color: rgb(255, 153, 0);
-	border-top-width: 20px;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
+	background-color: transparent;
+    left: 279px;
+    top: 261px;
+    margin: 0;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: rgb(255, 153, 0);
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
 	/* display: inline-block; */
 }
 
 #ISSButton {
-    background-color: transparent;
-	margin-top: 465px;
-    margin-left: 688px;
-    width: 25px;
-    height: 25px;
+	background-color: transparent;
+    left: 368px;
+    top: 303px;
+    margin: 0;
+    width: 39px;
+    height: 20px;
     position: absolute;
     border-radius: 50%;
     border-color: rgb(255, 153, 0);
@@ -233,106 +270,106 @@ canvas{
     border-left-width: 5px;
     border-right-width: 5px;
     border-bottom-width: 5px;
-	/* display: inline-block; */
 }
 
 #MarsButton {
     background-color: transparent;
-	margin-top: 264px;
-    margin-left: 767px;
-    width: 120px;
-    height: 120px;
-	position: absolute;
-	border-radius: 50%;
-	border-color: rgb(4, 114, 0);
-	border-top-width: 20px;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
-	/* display: inline-block; */
+    left: 414px;
+    top: 190px;
+    margin: 0;
+    width: 69px;
+    height: 72px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: rgb(4, 114, 0);
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
 }
 
 
 #JupiterButton {
-    background-color: transparent;
-	margin-top: 541px;
-    margin-left: 858px;
-    width: 240px;
-    height: 240px;
-	position: absolute;
-	border-radius: 50%;
-	border-color: rgb(0, 247, 255);
-	border-top-width: 20px;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
+	background-color: transparent;
+    left: 460px;
+    top: 336px;
+    margin: 0;
+    width: 134px;
+    height: 131px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: rgb(0, 247, 255);
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
 	/* display: inline-block; */
 }
 
 
 #SaturnusButton {
-    background-color: transparent;
-    margin-top: 91px;
-    margin-left: 1094px;
-    width: 190px;
-    height: 190px;
-	position: absolute;
-	border-radius: 50%;
-	border-color: rgb(0, 247, 255);
-	border-top-width: 20px;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
-	/* display: inline-block; */
+	background-color: transparent;
+    left: 586px;
+    top: 103px;
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: rgb(0, 247, 255);
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
 }
 
 
 #UranusButton {
-    background-color: transparent;
-	margin-top: 382px;
-    margin-left: 1338px;
-    width: 150px;
-    height: 150px;
-	position: absolute;
-	border-radius: 50%;
-	border-color: rgb(0, 247, 255);
-	border-top-width: 20px;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
-	/* display: inline-block; */
+	background-color: transparent;
+    left: 714px;
+    top: 255px;
+    margin: 0;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: rgb(0, 247, 255);
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
 }
 
 #NeptunusButton {
     background-color: transparent;
-	margin-top: 91px;
-    margin-left: 1514px;
-    width: 150px;
-    height: 150px;
-	position: absolute;
-	border-radius: 50%;
-	border-color: rgb(5, 204, 95);
-	border-top-width: 20px;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
-	/* display: inline-block; */
+    left: 804px;
+    top: 101px;
+    margin: 0;
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: rgb(5, 204, 95);
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
 }
 
 #PlutoButton {
     background-color: transparent;
-	margin-top: 28px;
-    margin-left: 1695px;
-    width: 90px;
-    height: 90px;
-	position: absolute;
-	border-radius: 50%;
-	border-color: rgb(5, 204, 95);
-	border-top-width: 20px;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
-	/* display: inline-block; */
+    left: 898px;
+    top: 68px;
+    margin: 0;
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    border-radius: 50%;
+    border-color: rgb(5, 204, 95);
+    border-top-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
 }
 
 

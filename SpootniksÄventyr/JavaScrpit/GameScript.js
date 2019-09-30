@@ -73,7 +73,9 @@ UnloadImage = function(){
     context.clearRect(0, 0, canvas.width, canvas.height)
 }
 
-
+MouseOver = function(){
+    
+}
 // SetQuestions = function(){
 //     Question=questions[qnumber];
 //     CorrectAnswer=1+Math.floor(Math.random()*3);

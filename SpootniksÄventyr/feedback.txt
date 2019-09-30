@@ -1,0 +1,7 @@
+- tutorial
+- sammanfattning/endscreen
+- mouseover-info om planeter
+- bättre färgkodning
+- visa progression/poäng på spelskärmen
+- färgkodning visar progression för planeter
+- fokusera på historisk fakta

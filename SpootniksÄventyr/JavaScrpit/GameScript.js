@@ -43,11 +43,8 @@ LoadImage = function(imageURL){
     document.getElementById('UranusButton').style.visibility = 'hidden';
     document.getElementById('NeptunusButton').style.visibility = 'hidden';
     document.getElementById('PlutoButton').style.visibility = 'hidden';
-    document.body.style.backgroundImage = "url('"+imageURL+"')";
-    //context.drawImage(quizbg, 0, 0);
-    //quizbg.src = "Images/quizbg.png";
-    //canvas.addEventListener('click',ProcessClick,false);
-    //SetQuestions();
+    canvas.style.backgroundImage = "url('"+imageURL+"')";
+    
     document.getElementById('quizButton1').style.visibility = 'visible';
     document.getElementById('quizButton2').style.visibility = 'visible';
     document.getElementById('quizButton3').style.visibility = 'visible';
@@ -69,7 +66,7 @@ UnloadImage = function(){
     document.getElementById('quizButton1').style.visibility = 'hidden';
     document.getElementById('quizButton2').style.visibility = 'hidden';
     document.getElementById('quizButton3').style.visibility = 'hidden';
-    document.body.style.backgroundImage = "url('Images/Map2.png')";
+    canvas.style.backgroundImage = "url('Images/Mapresize.jpg')";
     context.clearRect(0, 0, canvas.width, canvas.height)
 }
 
@@ -331,6 +328,7 @@ Click= function(id){
     if(buttonValue == correctAnswers[qnumber]){
         alert("Du hade rätt!");
         rightanswers++;
+        document.getElementById('points').innerHTML = rightanswers;
     } else {
         alert("Du hade fel, rätt svar är: " + correctAnswers[qnumber]);
         wronganswers++;

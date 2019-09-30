@@ -12,6 +12,19 @@ body, h1, div, p, input, button, #button2, #my_centered_buttons, h1, #quizButton
 	padding: 0;
 }
 
+#pointcounters{
+	position: absolute;
+	z-index: 1;
+	left: 50px;
+	top: 20px;
+	width:100px;
+	height:20px;
+	color: white;
+}
+#points{
+	color: white;
+}
+
 body, html{
 	height: 100%;
 	width: 100%;

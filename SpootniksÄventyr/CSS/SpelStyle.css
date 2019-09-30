@@ -108,6 +108,38 @@ canvas{
 	visibility: hidden;
 }
 
+#MerkuriusInfo{
+	visibility: hidden;
+}
+
+#VenusInfo{
+	visibility: hidden;
+}
+#JordenInfo{
+	visibility: hidden;
+}
+#ISSInfo{
+	visibility: hidden;
+}
+#MarsInfo{
+	visibility: hidden;
+}
+#JupiterInfo{
+	visibility: hidden;
+}
+#SaturnusInfo{
+	visibility: hidden;
+}
+#UranusInfo{
+	visibility: hidden;
+}
+#NeptunusInfo{
+	visibility: hidden;
+}
+#PlutoInfo{
+	visibility: hidden;
+}
+
 #SolenButton {
     background-color: transparent;
 

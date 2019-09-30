@@ -74,73 +74,73 @@ UnloadImage = function(){
 }
 
 MouseOver = function(id){
-    if(id = "SolenButton"){
+    if(id == "SolenButton"){
         document.getElementById('SolenInfo').style.visibility = 'visible';
     }
-    if(id = "MerkuriusButton"){
+    else if(id == "MerkuriusButton"){
         document.getElementById('MerkuriusInfo').style.visibility = 'visible';
     }
-    if(id = "VenusButton"){
+    else if(id == "VenusButton"){
         document.getElementById('VenusInfo').style.visibility = 'visible';
     }
-    if(id = "JordenButton"){
+    else if(id == "JordenButton"){
         document.getElementById('JordenInfo').style.visibility = 'visible';
     }
-    if(id = "ISSButton"){
+    else if(id == "ISSButton"){
         document.getElementById('ISSInfo').style.visibility = 'visible';
     }
-    if(id = "MarsButton"){
+    else if(id == "MarsButton"){
         document.getElementById('MarsInfo').style.visibility = 'visible';
     }
-    if(id = "JupiterButton"){
+    else if(id == "JupiterButton"){
         document.getElementById('JupiterInfo').style.visibility = 'visible';
     }
-    if(id = "SaturnusButton"){
+    else if(id == "SaturnusButton"){
         document.getElementById('SaturnusInfo').style.visibility = 'visible';
     }
-    if(id = "UranusButton"){
+    else if(id == "UranusButton"){
         document.getElementById('UranusInfo').style.visibility = 'visible';
     }
-    if(id = "NeptunusButton"){
+    else if(id == "NeptunusButton"){
         document.getElementById('NeptunusInfo').style.visibility = 'visible';
     }
-    if(id = "PlutoButton"){
+    else if(id == "PlutoButton"){
         document.getElementById('PlutoInfo').style.visibility = 'visible';
     }
 }
 
-MouseOut = function(){
-    if(id = "SolenButton"){
+MouseOut = function(id){
+    if(id == "SolenButton"){
         document.getElementById('SolenInfo').style.visibility = 'hidden';
     }
-    if(id = "MerkuriusButton"){
+    else if(id == "MerkuriusButton"){
         document.getElementById('MerkuriusInfo').style.visibility = 'hidden';
     }
-    if(id = "VenusButton"){
+    else if(id == "VenusButton"){
         document.getElementById('VenusInfo').style.visibility = 'hidden';
     }
-    if(id = "JordenButton"){
+    else if(id == "JordenButton"){
         document.getElementById('JordenInfo').style.visibility = 'hidden';
     }
-    if(id = "ISSButton"){
+    else if(id == "ISSButton"){
         document.getElementById('ISSInfo').style.visibility = 'hidden';
     }
-    if(id = "MarsButton"){
+    else if(id == "MarsButton"){
         document.getElementById('MarsInfo').style.visibility = 'hidden';
     }
-    if(id = "JupiterButton"){
+    else if(id == "JupiterButton"){
         document.getElementById('JupiterInfo').style.visibility = 'hidden';
     }
-    if(id = "SaturnusButton"){
+    else if(id == "SaturnusButton"){
         document.getElementById('SaturnusInfo').style.visibility = 'hidden';
     }
-    if(id = "UranusButton"){
+    else if(id == "UranusButton"){
         document.getElementById('UranusInfo').style.visibility = 'hidden';
     }
-    if(id = "NeptunusButton"){
+    else if(id == "NeptunusButton"){
         document.getElementById('NeptunusInfo').style.visibility = 'hidden';
     }
-    if(id = "PlutoButton"){
+    else if(id == "PlutoButton"){
         document.getElementById('PlutoInfo').style.visibility = 'hidden';
     }
 

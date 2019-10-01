@@ -6,20 +6,20 @@ var currentPlanet = new String;
 var canvas = document.getElementById("QuizWindow");
 var context = canvas.getContext("2d");
 
-var quizbg = new Image();
-var Question = new String;
-var Option1 = new String;
-var Option2 = new String;
-var Option3 = new String;
+// var quizbg = new Image();
+// var Question = new String;
+// var Option1 = new String;
+// var Option2 = new String;
+// var Option3 = new String;
 var qnumber = 0;
-var CorrectAnswer = 0;
-var lock = false;
-var textpos1=45;
-var textpos2=145;
-var textpos3=230;
-var textpos4=325;
-var mx=0;
-var my=0;
+// var CorrectAnswer = 0;
+// var lock = false;
+// var textpos1=45;
+// var textpos2=145;
+// var textpos3=230;
+// var textpos4=325;
+// var mx=0;
+// var my=0;
 
 var questions;
 var answers;
@@ -27,22 +27,25 @@ var correctAnswers;
 
 var rightanswers=0;
 var wronganswers=0;
+var visitedPlanets=0;
+
 document.getElementById('quizButton1').style.visibility = 'hidden';
 document.getElementById('quizButton2').style.visibility = 'hidden';
 document.getElementById('quizButton3').style.visibility = 'hidden';
 
 LoadImage = function(imageURL){
-    document.getElementById('SolenButton').style.visibility = 'hidden';
-    document.getElementById('MerkuriusButton').style.visibility = 'hidden';
-    document.getElementById('VenusButton').style.visibility = 'hidden';
-    document.getElementById('JordenButton').style.visibility = 'hidden';
-    document.getElementById('ISSButton').style.visibility = 'hidden';
-    document.getElementById('MarsButton').style.visibility = 'hidden';
-    document.getElementById('JupiterButton').style.visibility = 'hidden';
-    document.getElementById('SaturnusButton').style.visibility = 'hidden';
-    document.getElementById('UranusButton').style.visibility = 'hidden';
-    document.getElementById('NeptunusButton').style.visibility = 'hidden';
-    document.getElementById('PlutoButton').style.visibility = 'hidden';
+    // document.getElementById('SolenButton').style.visibility = 'hidden';
+    // document.getElementById('MerkuriusButton').style.visibility = 'hidden';
+    // document.getElementById('VenusButton').style.visibility = 'hidden';
+    // document.getElementById('JordenButton').style.visibility = 'hidden';
+    // document.getElementById('ISSButton').style.visibility = 'hidden';
+    // document.getElementById('MarsButton').style.visibility = 'hidden';
+    // document.getElementById('JupiterButton').style.visibility = 'hidden';
+    // document.getElementById('SaturnusButton').style.visibility = 'hidden';
+    // document.getElementById('UranusButton').style.visibility = 'hidden';
+    // document.getElementById('NeptunusButton').style.visibility = 'hidden';
+    // document.getElementById('PlutoButton').style.visibility = 'hidden';
+    document.getElementById("buttons").style.visibility = 'hidden';
     canvas.style.backgroundImage = "url('"+imageURL+"')";
     
     document.getElementById('quizButton1').style.visibility = 'visible';
@@ -50,95 +53,134 @@ LoadImage = function(imageURL){
     document.getElementById('quizButton3').style.visibility = 'visible';
 }
 UnloadImage = function(){
-    document.getElementById('SolenButton').style.visibility = 'visible';
-    document.getElementById('MerkuriusButton').style.visibility = 'visible';
-    document.getElementById('VenusButton').style.visibility = 'visible';
-    document.getElementById('JordenButton').style.visibility = 'visible';
-    document.getElementById('ISSButton').style.visibility = 'visible';
-    document.getElementById('MarsButton').style.visibility = 'visible';
-    document.getElementById('JupiterButton').style.visibility = 'visible';
-    document.getElementById('SaturnusButton').style.visibility = 'visible';
-    document.getElementById('UranusButton').style.visibility = 'visible';
-    document.getElementById('NeptunusButton').style.visibility = 'visible';
-    document.getElementById('PlutoButton').style.visibility = 'visible';
+    // document.getElementById('SolenButton').style.visibility = 'visible';
+    // document.getElementById('MerkuriusButton').style.visibility = 'visible';
+    // document.getElementById('VenusButton').style.visibility = 'visible';
+    // document.getElementById('JordenButton').style.visibility = 'visible';
+    // document.getElementById('ISSButton').style.visibility = 'visible';
+    // document.getElementById('MarsButton').style.visibility = 'visible';
+    // document.getElementById('JupiterButton').style.visibility = 'visible';
+    // document.getElementById('SaturnusButton').style.visibility = 'visible';
+    // document.getElementById('UranusButton').style.visibility = 'visible';
+    // document.getElementById('NeptunusButton').style.visibility = 'visible';
+    // document.getElementById('PlutoButton').style.visibility = 'visible';
 
-    document.getElementById(currentPlanet).style.visibility = 'hidden';
+    document.getElementById("buttons").style.visibility = 'visible';
+
+    //document.getElementById(currentPlanet).style.visibility = 'hidden';
+    var lastPlanet = document.getElementById(currentPlanet);
+    lastPlanet.parentNode.removeChild(lastPlanet);
+
     document.getElementById('quizButton1').style.visibility = 'hidden';
     document.getElementById('quizButton2').style.visibility = 'hidden';
     document.getElementById('quizButton3').style.visibility = 'hidden';
-    canvas.style.backgroundImage = "url('Images/Mapresize.jpg')";
-    context.clearRect(0, 0, canvas.width, canvas.height)
+    canvas.style.backgroundImage = "url('Images/MapNy.png')";
+    //context.clearRect(0, 0, canvas.width, canvas.height)
+    document.getElementById('frågetext').style.visibility = 'hidden';
 }
 
 MouseOver = function(id){
     if(id == "SolenButton"){
         document.getElementById('SolenInfo').style.visibility = 'visible';
+        document.getElementById('planettext').innerHTML = "Solen är vårt solsystems stjärna som alla planeter ligger i omlopp kring, vars ljus och värme gör det möjligt för liv att finnas på jorden.";
+        document.getElementById('planettext').style.visibility = 'visible';
     }
     else if(id == "MerkuriusButton"){
         document.getElementById('MerkuriusInfo').style.visibility = 'visible';
+        document.getElementById('planettext').innerHTML = "Merkurius är solsystemets första och minsta planet, en liten stenig planet vars yta liknar vår månes. Det är rätt svårt att se den med blotta ögat men ändå har människan kunnat observera den i över 3400 år!";
+        document.getElementById('planettext').style.visibility = 'visible';
     }
     else if(id == "VenusButton"){
         document.getElementById('VenusInfo').style.visibility = 'visible';
+        document.getElementById('planettext').innerHTML = "Venus är solsystemets andra planet från solen. Den är nästan lika stor som Jorden och ligger såpass nära att den går att se ganska lätt med blotta ögat.";
+        document.getElementById('planettext').style.visibility = 'visible';
     }
     else if(id == "JordenButton"){
         document.getElementById('JordenInfo').style.visibility = 'visible';
+        document.getElementById('planettext').innerHTML = "Jorden är den tredje planeten i solsystemet och oss människors planet, den enda planeten i solsystemet där liv finns, så vitt vi vet. Jordens mycket speciella förutsättningar gjorde det möjligt för liv att utvecklas här.";
+        document.getElementById('planettext').style.visibility = 'visible';
     }
     else if(id == "ISSButton"){
         document.getElementById('ISSInfo').style.visibility = 'visible';
+        document.getElementById('planettext').innerHTML = "ISS (International Space Station) är en rymdstation som ligger i omlopp runt Jorden. Häruppe bor det ständigt 3-6 astronauter från hela Jorden. De flyter runt tyngdlösa i stationen och forskar på alla möjliga saker kring astronomi, meteorologi och människans vistelse i rymden.";
+        document.getElementById('planettext').style.visibility = 'visible';
     }
     else if(id == "MarsButton"){
         document.getElementById('MarsInfo').style.visibility = 'visible';
+        document.getElementById('planettext').innerHTML = "Mars, den röda planeten, är den fjärde planeten i solsystemet. Mars atmosfär och klimat är förvisso inte så likt Jordens men det är mindre extremt än de andra planeternas, vilket gör att vi människor tror att det är möjligt att snart kunna skicka en människa till Mars.";
+        document.getElementById('planettext').style.visibility = 'visible';
     }
     else if(id == "JupiterButton"){
         document.getElementById('JupiterInfo').style.visibility = 'visible';
+        document.getElementById('planettext').innerHTML = "Jupiter är den femte och största planeten i solsystemet. Jupiter är en såkallad gasjätte, en planet som består av gaser. Det är okänt om Jupiter har en fast kärna inuti eller består till 100% av gas.";
+        document.getElementById('planettext').style.visibility = 'visible';
     }
     else if(id == "SaturnusButton"){
         document.getElementById('SaturnusInfo').style.visibility = 'visible';
+        document.getElementById('planettext').innerHTML = "Saturnus är den sjätte planeten i solsystemet. Den förknippas ofta med sina karaktäristiska ringar. Dock är Saturnus inte den enda planeten med ringar, Jupiter har också ringar men de är rätt tunna och svårare att se.";
+        document.getElementById('planettext').style.visibility = 'visible';
     }
     else if(id == "UranusButton"){
         document.getElementById('UranusInfo').style.visibility = 'visible';
+        document.getElementById('planettext').innerHTML = "Uranus är den sjunde planeten i solsystemet. Den är en av de fyra jätteplaneterna, Jupiter, Saturnus, Uranus och Neptunus. Uranus är en kall planet som lutar 98° (Jorden lutar 23,5°), så den 'rullar' fram genom rymden!";
+        document.getElementById('planettext').style.visibility = 'visible';
     }
     else if(id == "NeptunusButton"){
         document.getElementById('NeptunusInfo').style.visibility = 'visible';
+        document.getElementById('planettext').innerHTML = "Neptunus är den åttonde planeten i solsystemet. Likt Uranus är den väldigt kall och stormig och består av gaser, men den utstrålar värme inifrån vilket gör den lite varmare än Uranus. På Neptunus kan vinden blåsa över 2000 kilometer i timmen!";
+        document.getElementById('planettext').style.visibility = 'visible';
     }
     else if(id == "PlutoButton"){
         document.getElementById('PlutoInfo').style.visibility = 'visible';
+        document.getElementById('planettext').innerHTML = "Pluto räknas egentligen inte längre som en av solsystemets planeter, sedan den 2006 blev omklassifierad till en dvärgplanet av typen 'plutoid'. Den är väldigt kall och liten, bara 0,2% av Jordens volym. När Pluto är som längst bort ligger den hela 7.38 miljarer kilometer från solen.";
+        document.getElementById('planettext').style.visibility = 'visible';
     }
 }
 
 MouseOut = function(id){
     if(id == "SolenButton"){
         document.getElementById('SolenInfo').style.visibility = 'hidden';
+        document.getElementById('planettext').style.visibility = 'hidden';
     }
     else if(id == "MerkuriusButton"){
         document.getElementById('MerkuriusInfo').style.visibility = 'hidden';
+        document.getElementById('planettext').style.visibility = 'hidden';
     }
     else if(id == "VenusButton"){
         document.getElementById('VenusInfo').style.visibility = 'hidden';
+        document.getElementById('planettext').style.visibility = 'hidden';
     }
     else if(id == "JordenButton"){
         document.getElementById('JordenInfo').style.visibility = 'hidden';
+        document.getElementById('planettext').style.visibility = 'hidden';
     }
     else if(id == "ISSButton"){
         document.getElementById('ISSInfo').style.visibility = 'hidden';
+        document.getElementById('planettext').style.visibility = 'hidden';
     }
     else if(id == "MarsButton"){
         document.getElementById('MarsInfo').style.visibility = 'hidden';
+        document.getElementById('planettext').style.visibility = 'hidden';
     }
     else if(id == "JupiterButton"){
         document.getElementById('JupiterInfo').style.visibility = 'hidden';
+        document.getElementById('planettext').style.visibility = 'hidden';
     }
     else if(id == "SaturnusButton"){
         document.getElementById('SaturnusInfo').style.visibility = 'hidden';
+        document.getElementById('planettext').style.visibility = 'hidden';
     }
     else if(id == "UranusButton"){
         document.getElementById('UranusInfo').style.visibility = 'hidden';
+        document.getElementById('planettext').style.visibility = 'hidden';
     }
     else if(id == "NeptunusButton"){
         document.getElementById('NeptunusInfo').style.visibility = 'hidden';
+        document.getElementById('planettext').style.visibility = 'hidden';
     }
     else if(id == "PlutoButton"){
         document.getElementById('PlutoInfo').style.visibility = 'hidden';
+        document.getElementById('planettext').style.visibility = 'hidden';
     }
 
 }
@@ -177,7 +219,7 @@ Earth = function(){
      answers = [["Apa.", "Råtta.", "Hund."],
      ["1951.", "1956.", "1961."], 
      ["År 1500-1600.", "År 1700-1800.", "År 1800-1900."]];
-    correctAnswers = ["Mount Everest", "10 miljarder", "17 dagar"];
+    correctAnswers = ["Hund.", "1961.", "År 1500-1600."];
     var image = "Images/Planets/Earth.jpg";
     currentPlanet = "JordenButton";
     LoadImage(image);
@@ -190,7 +232,7 @@ ISS = function(){
      answers = [["1945.", "1969.", "1998."],
      ["3-6.", "10-15.", "25-30."],
       ["Christer Fuglesang.", "Malin Persson.", "Mikael Persbrandt."]];
-    correctAnswers = ["1998.", "3-6 st.", "Christer Fuglesang."];
+    correctAnswers = ["1998.", "3-6.", "Christer Fuglesang."];
     var image = "Images/Planets/ISS.jpg";
     currentPlanet = "ISSButton";
     LoadImage(image);
@@ -311,12 +353,9 @@ SetupQuiz = function(){
     button2.value = ans2;
     button3.value =ans3;
 
+    document.getElementById('frågetext').innerHTML = questions[qnumber];
+    document.getElementById('frågetext').style.visibility = 'visible';
 
-    context.clearRect(0,0, canvas.clientWidth, canvas.height);
-    context.textBaseline = "middle";
-    context.font = "20pt Calibri,Arial";
-    context.fillStyle = "#FFFFFF";
-	context.fillText(questions[qnumber],10,50);
 }
 
 
@@ -339,16 +378,18 @@ Click= function(id){
         qnumber = 0;
         UnloadImage();
         //göm knappar, ta bort quizmaterial osv.
+        visitedPlanets++;
+        if(visitedPlanets==11){
+            LoadEndPage();
+        }
     }else{
         qnumber++;
-        SetupQuiz();
-        
+        SetupQuiz();       
     }
-
-
-
-    
-    
-
 }
- }
+
+LoadEndPage = function(){
+    localStorage.setItem('yourpoints',rightanswers.toString());
+    window.location ="SlutSida.html";
+}
+}

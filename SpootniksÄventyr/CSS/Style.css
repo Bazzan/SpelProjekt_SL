@@ -19,6 +19,10 @@ h1{
      1px 1px 0 #000;
 }
 
+#introheader{
+	color: rgb(250, 123, 107);
+}
+
 body {
 	background-color: rgb(228, 228, 228);
 	background-repeat: no-repeat;
@@ -36,6 +40,7 @@ body {
 	height: 40px;
 	width: 100px;
 }
+
 div{
     border: 3px salmon;
     width: 30%;
@@ -64,6 +69,22 @@ p.new_font {
 	width: 100%;
 	display: block;
 	color: black;
+}
+
+#introtext{
+	color:rgb(171, 212, 181);
+}
+
+#feedback{
+	color:rgb(255, 199, 125);
+}
+
+#frågetext{
+	visibility: hidden;
+	color: white;
+	font-size: 18px;
+	width: 600px;
+	padding-left: 70px;
 }
 
 img{

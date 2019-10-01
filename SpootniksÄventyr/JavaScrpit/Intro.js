@@ -11,7 +11,4 @@ window.onload = function() {
         window.location="Credit.html";
     }
 
-    SpelaIgen = function(){
-        window.location="Intro.html"
-    }
 }

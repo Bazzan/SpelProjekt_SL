@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="CSS\SpelStyle.css">
+    <title>Spootniks Äventyr</title>
 </head>
 
 <body>
@@ -17,16 +18,15 @@
     <p id="points"> 0 </p>
 </div>
 
-<!-- här ifrån så är all syntax funktionallitet vi behöver för att göra knapparna 
-om ni kollar i CSS filen så har jag gjort knappen rund (boarder-radius: 50%) och sen
-när man ska placera ut knapparna så använder man margin, gå in i debug och markera margin [ X px]
-och använd upp och ned pilarna på tangentbordet för att flytta runt elementet :D -->
-<!-- <button type="button" id="SunButton" name="SunButton" onclick="PlingPlong()"  >
-    <img src="IMG/Icon.png" height="100%" width="100%"/>
+<p id="frågetext">
+
+</p>
+
+<p id="planettext">
     
-</button> -->
+</p>
 
-
+<div id = "buttons">
 
 <button type="button"
 id="SolenButton"
@@ -43,7 +43,6 @@ name="MerkuriusButton"
 onclick="Mercury()"
 onmouseover="MouseOver(id)"
 onmouseout="MouseOut(id)"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
 </button>
 <img src="Images/merkuriusinfo.png" id="MerkuriusInfo" width="200" height="200" alt="info om merkurius"></img>
 
@@ -53,7 +52,6 @@ name="VenusButton"
 onclick="Venus()"
 onmouseover="MouseOver(id)"
 onmouseout="MouseOut(id)"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
 </button>
 <img src="Images/venusinfo.png" id="VenusInfo" width="200" height="200" alt="info om venus"></img>
 
@@ -63,7 +61,6 @@ name="JordenButton"
 onclick="Earth()"
 onmouseover="MouseOver(id)"
 onmouseout="MouseOut(id)"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
 </button>
 <img src="Images/jordeninfo.png" id="JordenInfo" width="200" height="200" alt="info om jorden"></img>
 
@@ -82,7 +79,6 @@ name="MarsButton"
 onclick="Mars()"
 onmouseover="MouseOver(id)"
 onmouseout="MouseOut(id)"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
 </button>
 <img src="Images/Marsinfo.png" id="MarsInfo" width="200" height="200" alt="info om mars"></img>
 
@@ -92,7 +88,6 @@ name="JupiterButton"
 onclick="Jupiter()"
 onmouseover="MouseOver(id)"
 onmouseout="MouseOut(id)"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
 </button>
 <img src="Images/jupiterinfo.png" id="JupiterInfo" width="200" height="200" alt="info om jupiter"></img>
 
@@ -102,7 +97,6 @@ name="SaturnusButton"
 onclick="Saturn()"
 onmouseover="MouseOver(id)"
 onmouseout="MouseOut(id)"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
 </button>
 <img src="Images/saturnusinfo.png" id="SaturnusInfo" width="200" height="200" alt="info om saturnus"></img>
 
@@ -113,7 +107,6 @@ name="UranusButton"
 onclick="Uranus()"
 onmouseover="MouseOver(id)"
 onmouseout="MouseOut(id)"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
 </button>
 <img src="Images/uranusinfo.png" id="UranusInfo" width="200" height="200" alt="info om uranus"></img>
 
@@ -123,7 +116,6 @@ name="NeptunusButton"
 onclick="Neptune()"
 onmouseover="MouseOver(id)"
 onmouseout="MouseOut(id)"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
 </button>
 <img src="Images/neptunusinfo.png" id="NeptunusInfo" width="200" height="200" alt="info om neptunus"></img>
 
@@ -133,7 +125,6 @@ name="PlutoButton"
 onclick="Pluto()"
 onmouseover="MouseOver(id)"
 onmouseout="MouseOut(id)"  >
-    <!-- <img src="IMG/Icon.png" height="100%" width="100%"/> -->
 </button>
 <img src="Images/plutoinfo.png" id="PlutoInfo" width="200" height="200" alt="info om pluto"></img>
 

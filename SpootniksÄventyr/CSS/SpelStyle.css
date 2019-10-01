@@ -27,14 +27,40 @@ body, h1, div, p, input, button, #button2, #my_centered_buttons, h1, #quizButton
 	color: white;
 }
 
+#frågetext{
+    position: absolute;
+    visibility: hidden;
+    /* z-index: 1; */
+    left: 70px;
+    top: 40px;
+
+	color: white;
+	font-size: 20px;
+	width: 600px;
+	/* padding-left: 70px; */
+}
+
+#planettext{
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    left: 20px;
+    top: 470px;
+
+	color: white;
+	font-size: 18px;
+	width: 600px;
+}
+
 body, html{
 	height: 100%;
 	width: 100%;
-	/* background-image:url("../Images/Map2.png"); */
+    background-image:url("../Images/spacebgfade.png");
+    position: absolute;
+    z-index: -1;
 	background-color: bisque;
-	background-repeat: no-repeat;
 	background-position: 0 0;
-	/* background-size: cover; */
+	background-size: cover;
 }
 
 h1{
@@ -115,8 +141,8 @@ button {
 }
 
 canvas{
-	background: url("../Images/Mapresize.jpg");
-	/* background-color: blue; */
+	/* background: url("../Images/Mapresize.jpg"); */
+	background: url("../Images/MapNy.png");
 }
 
 #SolenInfo{
@@ -198,11 +224,12 @@ canvas{
     height: 160px;
     position: absolute;
     border-radius: 50%;
-    border-color: magenta;
+    border-color: yellow;
     border-top-width: 10px;
     border-left-width: 10px;
     border-right-width: 10px;
     border-bottom-width: 10px;
+    opacity: 0.3;
 	/* display: inline-block; */
 
 }
@@ -216,11 +243,12 @@ canvas{
     height: 61px;
     position: absolute;
     border-radius: 50%;
-    border-color: rgb(0, 255, 0);
+    border-color: rgb(134, 134, 134);
     border-top-width: 10px;
     border-left-width: 10px;
     border-right-width: 10px;
     border-bottom-width: 10px;
+    opacity: 0.3;
 }
 #VenusButton {
 	background-color: transparent;
@@ -231,12 +259,13 @@ canvas{
     height: 90px;
     position: absolute;
     border-radius: 50%;
-    border-color: rgb(217, 255, 0);
+    border-color: rgb(179, 105, 56);
     border-top-width: 10px;
     border-left-width: 10px;
     border-right-width: 10px;
     border-bottom-width: 10px;
-	/* display: inline-block; */
+    /* display: inline-block; */
+    opacity: 0.3;
 }
 
 #JordenButton {
@@ -248,12 +277,13 @@ canvas{
     height: 90px;
     position: absolute;
     border-radius: 50%;
-    border-color: rgb(255, 153, 0);
+    border-color: rgb(67, 79, 255);
     border-top-width: 10px;
     border-left-width: 10px;
     border-right-width: 10px;
     border-bottom-width: 10px;
-	/* display: inline-block; */
+    /* display: inline-block; */
+    opacity: 0.3;
 }
 
 #ISSButton {
@@ -265,11 +295,12 @@ canvas{
     height: 20px;
     position: absolute;
     border-radius: 50%;
-    border-color: rgb(255, 153, 0);
+    border-color: rgb(153, 153, 153);
     border-top-width: 5px;
     border-left-width: 5px;
     border-right-width: 5px;
     border-bottom-width: 5px;
+    opacity: 0.3;
 }
 
 #MarsButton {
@@ -281,11 +312,12 @@ canvas{
     height: 72px;
     position: absolute;
     border-radius: 50%;
-    border-color: rgb(4, 114, 0);
+    border-color: rgb(228, 117, 26);
     border-top-width: 10px;
     border-left-width: 10px;
     border-right-width: 10px;
     border-bottom-width: 10px;
+    opacity: 0.3;
 }
 
 
@@ -298,12 +330,13 @@ canvas{
     height: 131px;
     position: absolute;
     border-radius: 50%;
-    border-color: rgb(0, 247, 255);
+    border-color: rgb(192, 129, 47);
     border-top-width: 10px;
     border-left-width: 10px;
     border-right-width: 10px;
     border-bottom-width: 10px;
-	/* display: inline-block; */
+    /* display: inline-block; */
+    opacity: 0.3;
 }
 
 
@@ -316,11 +349,12 @@ canvas{
     height: 100px;
     position: absolute;
     border-radius: 50%;
-    border-color: rgb(0, 247, 255);
+    border-color: rgb(192, 129, 47);
     border-top-width: 10px;
     border-left-width: 10px;
     border-right-width: 10px;
     border-bottom-width: 10px;
+    opacity: 0.3;
 }
 
 
@@ -338,6 +372,7 @@ canvas{
     border-left-width: 10px;
     border-right-width: 10px;
     border-bottom-width: 10px;
+    opacity: 0.3;
 }
 
 #NeptunusButton {
@@ -349,12 +384,14 @@ canvas{
     height: 84px;
     position: absolute;
     border-radius: 50%;
-    border-color: rgb(5, 204, 95);
+    border-color: rgb(23, 148, 206);
     border-top-width: 10px;
     border-left-width: 10px;
     border-right-width: 10px;
     border-bottom-width: 10px;
+    opacity: 0.3;
 }
+
 
 #PlutoButton {
     background-color: transparent;
@@ -365,11 +402,12 @@ canvas{
     height: 52px;
     position: absolute;
     border-radius: 50%;
-    border-color: rgb(5, 204, 95);
+    border-color: rgb(78, 78, 78);
     border-top-width: 10px;
     border-left-width: 10px;
     border-right-width: 10px;
     border-bottom-width: 10px;
+    opacity: 0.3;
 }
 
 

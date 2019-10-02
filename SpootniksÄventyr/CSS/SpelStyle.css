@@ -1,4 +1,4 @@
-body, h1, div, p, input, button, #button2, #my_centered_buttons, h1, #quizButton1
+body, h1, div, p, input, button, #button2, #my_centered_buttons, h1, #ButtonDiv #quizButton1
 #SunButton, #MerkuriusButton,#VenusButton,#JordenButton,#MarsButton,
 #JupiterButton,#SaturnusButton,#UranusButton, #NeptunusButton, #PlutoButton{
     margin: 0;
@@ -19,6 +19,13 @@ body, h1, div, p, input, button, #button2, #my_centered_buttons, h1, #quizButton
     top:30px;
     width: 300px;
     height: 150px;
+}
+#ButtonDiv{
+    width: 50%;
+    margin: none;
+    left: 50px;
+    position: absolute;
+    top: 490px;
 }
 
 #pointcounters{

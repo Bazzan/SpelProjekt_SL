@@ -254,7 +254,7 @@ Mars = function(){
     SetupQuiz();
 }
 Jupiter = function(){
-     questions = ["Jupiters yta är inte densamma som de andra planeterna i solsystemet. Vad består Jupiter av?",
+     questions = ["Vad består Jupiter av?",
       "När man ser på Jupiter kan man se en stor cirkel på planeten. Vad kallas denna cirkel?", 
       "Jupiter har besökts ett flertal gånger av rymdsonder genom historien. Men hur många?"];
      answers = [["Gas", "Is", "Kvicksand"], 

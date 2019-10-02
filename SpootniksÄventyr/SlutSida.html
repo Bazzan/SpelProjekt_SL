@@ -1,63 +1,66 @@
-
 <html lang="sv">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="CSS/Style.css">
-        <title>Spelets slut</title>
-    </head>
-    
-    
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <title>Spelets slut</title>
+</head>
+
+
+<body>
     <script src="JavaScrpit/endPageScript.js"></script>
     Intro.SetPoints();
     <h1 id="introheader"> Nu har du flygit klart tipsrundan! </h1>
     <br>
-    <p>
-        Nu när ni har flygit klart tipsrundan runt solsystemet så släpper Spootnik av dig på jorden igen. Spootnik ska nu
-        vidare till nästa solsystem och flyga deras tipsrunda.
-        
-    </p> 
-    <br>
-    <p id="introtext">
-        "To the Spootmobile! Ciao bella, som ni säger på Jorden, vi ses!"
-        
-    </p>
-        <br>
-    <p>
-        Spootnik flyger iväg på nya äventyr. Hejdå Spootnik!
-    </p>
-    <br>
-    <br>
-    <p> 
-        Du fick totalt <p id="antalpoäng">
-            temp
-        </p>
+    <div id="IntroDiv">
         <p>
-        poäng av 33 möjliga!
-    </p>
-    <br>
-    <p id="feedback">Superbra jobbat, du är ett riktigt proffs på människans historia med rymden!
+            Nu när ni har flygit klart tipsrundan runt solsystemet så släpper Spootnik av dig på jorden igen. Spootnik
+            ska nu
+            vidare till nästa solsystem och flyga deras tipsrunda.
 
-    </p>
-    
-    
-    
-    
-    
-    <button id="PlayAgain" 
-    onclick="SpelaIgen()"
-    >
-        Spela igen!
-    
-    
-    </button>
-    
-    
-    <button type = "button"
-        id = "Credit"
-    onclick = "Credit()" >
-    Credits 
-    </button>
-    
-    </body>
-    </html>
+        </p>
+        <br>
+        <p id="introtext">
+            "To the Spootmobile! Ciao bella, som ni säger på Jorden, vi ses!"
+
+        </p>
+        <br>
+        <p>
+            Spootnik flyger iväg på nya äventyr. Hejdå Spootnik!
+        </p>
+        <br>
+        <br>
+        <p>
+            Du fick totalt <p id="antalpoäng">
+                temp
+            </p>
+            <p>
+                poäng av 33 möjliga!
+            </p>
+            <br>
+            <p id="feedback">
+                Superbra jobbat, du är ett riktigt proffs på människans historia med rymden!
+
+                <p>
+                        <button type="button" id="PlayAgain" onclick="SpelaIgen()">
+                                Spela igen!
+                            </button>
+                    
+                    
+                            <button type="button" id="Credit" onclick="Credit()">
+                                Credits
+                            </button>
+                </p>
+
+            </p>
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -38,12 +38,12 @@ body, h1, div, p, input, button, #button2, #my_centered_buttons, h1, #quizButton
     position: absolute;
     visibility: hidden;
     /* z-index: 1; */
-    left: 70px;
-    top: 40px;
-
-	color: white;
-	font-size: 20px;
-	width: 600px;
+    left: 225px;
+    top: 278px;
+    color: white;
+    font-size: 29px;
+    width: 600px;
+    /* padding-left: 70px;
 	/* padding-left: 70px; */
 }
 
